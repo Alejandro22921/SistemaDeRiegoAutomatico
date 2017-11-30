@@ -9,7 +9,7 @@
                 <MenuItem x:Name="menuAutomatico" Header="Automático" Width="151" Click="menuAutomatico_Click"/>
                 <MenuItem x:Name="menuProgramado" Header="Programado" Width="151" Click="menuProgramado_Click"/>
             </MenuItem>
-            <MenuItem x:Name="menuEstadisticas" Header="Estadísticas"/>
+            <MenuItem x:Name="menuEstadisticas" Header="Estadísticas" Click="menuEstadisticas_Click"/>
             <MenuItem x:Name="menuSalir" Header="Salir" Click="menuSalir_Click"/>
         </Menu>
 

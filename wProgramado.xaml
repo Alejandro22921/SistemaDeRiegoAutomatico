@@ -1,10 +1,10 @@
 ﻿<Window x:Class="SistemaDeRiegoAutomatico.wProgramado"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Configuración | Programado" Height="256.432" Width="439.419" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ecologico.png">
+        Title="Configuración | Programado" Height="355" Width="535" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ecologico.png">
     <Grid>
-        <Label Content="MODO PROGRAMADO" HorizontalAlignment="Left" Margin="143,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Sistema De Riego" HorizontalAlignment="Left" Margin="154,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="MODO PROGRAMADO" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="529" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Sistema De Riego" HorizontalAlignment="Center" Margin="0,23,5,0" VerticalAlignment="Top" Width="524" HorizontalContentAlignment="Center"/>
         <Label Content="Horarios:" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="-137,10,0,0" VerticalAlignment="Top" Width="0"/>
 

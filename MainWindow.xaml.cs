@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO.Ports;
+using System.Windows.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 namespace SistemaDeRiegoAutomatico
@@ -39,6 +42,11 @@ namespace SistemaDeRiegoAutomatico
         private void menuProgramado_Click(object sender, RoutedEventArgs e)
         {
             (new wProgramado()).Show();
+        }
+
+        private void menuEstadisticas_Click(object sender, RoutedEventArgs e)
+        {
+            (new wEstadisticas()).Show();
         }
 
 

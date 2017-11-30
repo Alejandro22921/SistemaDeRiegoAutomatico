@@ -1,18 +1,28 @@
 ﻿<Window x:Class="SistemaDeRiegoAutomatico.wEstadisticas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="wEstadisticas" Height="300" Width="300">
+        Title="Estadisticas" Height="609.701" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Resources/carta-de-barras.png">
     <Grid>
-        <DatePicker HorizontalAlignment="Left" Margin="112,121,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="112,192,0,0" VerticalAlignment="Top"/>
-        <TabControl HorizontalAlignment="Left" Height="100" Margin="-119,18,0,0" VerticalAlignment="Top" Width="100">
-            <TabItem Header="TabItem">
+        <Label Content="ESTADÍSTICAS DE VARIABLES DEL RIEGO" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="894" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Sistema De Riego" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" Width="894" HorizontalContentAlignment="Center"/>
+        <TabControl HorizontalAlignment="Left" Height="401" Margin="10,49,0,0" VerticalAlignment="Top" Width="874">
+            <TabItem Header="Temperatura">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Humedad">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
+            <TabItem Header="Luminosidad">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
         </TabControl>
+        <GroupBox Header="Consulta De Datos" HorizontalAlignment="Left" Margin="10,468,0,0" VerticalAlignment="Top" Height="103" Width="874">
+            <Grid Margin="10,10,-2,-12">
+                <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="129,36,0,0"/>
+                <DatePicker HorizontalAlignment="Left" Margin="338,29,0,0" VerticalAlignment="Top" Width="120"/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>
