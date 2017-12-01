@@ -27,6 +27,14 @@ namespace SistemaDeRiegoAutomatico
         public MainWindow()
         {
             InitializeComponent();
+            try
+            {
+                DBRiegoAutomatizado.DBConectar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("NO SE PUDO CONECTAR A LA BASE DE DATOS", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void menuSalir_Click(object sender, RoutedEventArgs e)
@@ -47,6 +55,12 @@ namespace SistemaDeRiegoAutomatico
         private void menuEstadisticas_Click(object sender, RoutedEventArgs e)
         {
             (new wEstadisticas()).Show();
+        }
+
+        private void rbtnAutomatico_Checked(object sender, RoutedEventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("¿Cambiar Al Modo Automático?", "", MessageBoxButton.OKCancel, MessageBoxImage.None);
         }
 
 
