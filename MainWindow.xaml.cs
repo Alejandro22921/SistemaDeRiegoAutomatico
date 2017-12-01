@@ -58,7 +58,7 @@ namespace SistemaDeRiegoAutomatico
             lblFecha.Content = DateTime.Now.ToString("ddd dd/MMM/yyyy");
 
             if (puerto.IsOpen)
-                puerto.Write("T");  // PIDE TEMPERATURA
+                puerto.Write("T");  // PETICIÓN DE TEMPERATURA.
         }
 
         delegate void ActualizaDatos();
