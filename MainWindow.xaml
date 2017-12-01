@@ -17,7 +17,7 @@
                 <Label Content="Hora:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="8,0,0,0"/>
                 <Label x:Name="lblHora" Content="-- : -- : --" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="58,0,0,0"/>
                 <Label Content="Fecha:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="8,26,0,0"/>
-                <Label x:Name="lblFecha" Content="-- :/ -- / --" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="58,26,0,0"/>
+                <Label x:Name="lblFecha" Content="-- / -- / --" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="58,26,0,0"/>
 
             </Grid>
         </GroupBox>
@@ -28,11 +28,11 @@
                     <Label x:Name="lblTemperatura" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,0,0,0" FontWeight="Bold"/>
                     <Label Content="Humedad:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="0,26,0,0"/>
                     <Label x:Name="lblHumedad" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,26,0,0" FontWeight="Bold"/>
-                    <Label x:Name="lblHora1_Copy" Content="°C" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="124,0,-10,0"/>
-                    <Label x:Name="lblHora1_Copy1" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,26,-8,0" RenderTransformOrigin="0.783,1.926"/>
+                    <Label Content="°C" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="124,0,-10,0"/>
+                    <Label Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,26,-8,0" RenderTransformOrigin="0.783,1.926"/>
                     <Label Content="Iluminación:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="0,53,0,0"/>
                     <Label x:Name="lblluminacion" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,53,0,0" FontWeight="Bold"/>
-                    <Label x:Name="lblHora1_Copy2" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,53,-8,0" RenderTransformOrigin="0.783,1.926"/>
+                    <Label Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,53,-8,0" RenderTransformOrigin="0.783,1.926"/>
 
                 </Grid>
 
