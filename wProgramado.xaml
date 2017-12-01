@@ -7,6 +7,7 @@
         <Label Content="Sistema De Riego" HorizontalAlignment="Center" Margin="0,23,5,0" VerticalAlignment="Top" Width="524" HorizontalContentAlignment="Center"/>
         <Label Content="Horarios:" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="-137,10,0,0" VerticalAlignment="Top" Width="0"/>
+        <DatePicker HorizontalAlignment="Left" Margin="192,185,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
