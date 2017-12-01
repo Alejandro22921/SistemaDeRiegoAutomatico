@@ -24,6 +24,12 @@ namespace SistemaDeRiegoAutomatico
     /// </summary>
     public partial class MainWindow : Window
     {
+        SerialPort puerto = new SerialPort("COM1", 9600, Parity.None, 8);
+        DispatcherTimer tiempo = new DispatcherTimer();                       //TIMER DE TIEMPO HORA Y FECHA DEL SISTEMA.
+        Chart figura = new Chart();
+        private string datosRecibidos = "";
+        int contador = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +41,17 @@ namespace SistemaDeRiegoAutomatico
             {
                 MessageBox.Show("NO SE PUDO CONECTAR A LA BASE DE DATOS", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            /* --- CONFIGURACIÓN DE TIMERS --- */
+            tiempo.Interval = TimeSpan.FromSeconds(1);  /* --- CADA 1s --- */
+            tiempo.Tick += new EventHandler(tiempo_Tick);
+            tiempo.Start();
+        }
+
+        void tiempo_Tick(object sender, EventArgs e)
+        {
+            lblHora.Content = DateTime.Now.ToString("h:mm:ss tt");
+            lblFecha.Content = DateTime.Now.ToString("ddd dd/MMM/yyyy");
         }
 
         private void menuSalir_Click(object sender, RoutedEventArgs e)
@@ -57,13 +74,22 @@ namespace SistemaDeRiegoAutomatico
             (new wEstadisticas()).Show();
         }
 
-        private void rbtnAutomatico_Checked(object sender, RoutedEventArgs e)
+        private void rbtnAutomatico_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("¿Cambiar Al Modo Automático?", "", MessageBoxButton.OKCancel, MessageBoxImage.None);
+                MessageBoxResult result = MessageBox.Show("¿Cambiar Al Modo Automático?", "", MessageBoxButton.OKCancel, MessageBoxImage.None);
+                if (result == MessageBoxResult.Cancel)
+                {
+                    rbtnProgramado.IsChecked = true;
+                }
         }
 
-
-
+        private void rbtnProgramado_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Cambiar Al Modo Programado?", "", MessageBoxButton.OKCancel, MessageBoxImage.None);
+            if (result == MessageBoxResult.Cancel)
+            {
+                rbtnAutomatico.IsChecked = true;
+            }
+        }
     }
 }
