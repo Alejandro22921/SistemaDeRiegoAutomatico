@@ -28,7 +28,7 @@ namespace SistemaDeRiegoAutomatico
         DispatcherTimer tiempo = new DispatcherTimer();                       // TIMER DE TIEMPO HORA Y FECHA DEL SISTEMA.
         Chart figura = new Chart();
         private string datosRecibidos = "";
-        int contador = 0;
+        long temperatura = 0;
 
         public MainWindow()
         {
@@ -59,6 +59,17 @@ namespace SistemaDeRiegoAutomatico
 
             if (puerto.IsOpen)
                 puerto.Write("T");  // PETICIÓN DE TEMPERATURA.
+
+            if (rbtnAutomatico.IsChecked == true)  //MODO AUTOMÁTICO
+            {
+                if (temperatura > 30)
+                    puerto.Write("0");
+            }
+            else                                   //MODO PROGRAMADO
+            {
+
+            }
+            
         }
 
         delegate void ActualizaDatos();
@@ -74,7 +85,7 @@ namespace SistemaDeRiegoAutomatico
 
         void actualiza()
         {
-            long temperatura = Convert.ToInt64(datosRecibidos);
+            temperatura = Convert.ToInt64(datosRecibidos);
             lblTemperatura.Content = temperatura.ToString();
             //long humedad = Convert.ToInt64(datosRecibidos);
             //long luminosidad = Convert.ToInt64(datosRecibidos);
@@ -82,6 +93,7 @@ namespace SistemaDeRiegoAutomatico
 
         private void menuSalir_Click(object sender, RoutedEventArgs e)
         {
+            puerto.Close();
             Close();
         }
 
