@@ -1,7 +1,7 @@
 ﻿<Window x:Class="SistemaDeRiegoAutomatico.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Panel De Control" Height="389.212" Width="587.448" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ecologismo.png">
+        Title="Panel De Control" Height="394.212" Width="602.448" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ecologismo.png">
     <Grid>
         <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="581">
             <MenuItem x:Name="menuInicio" Header="Inicio"/>
@@ -12,6 +12,38 @@
             <MenuItem x:Name="menuEstadisticas" Header="Estadísticas" Click="menuEstadisticas_Click"/>
             <MenuItem x:Name="menuSalir" Header="Salir" Click="menuSalir_Click"/>
         </Menu>
+        <GroupBox Header="Tiempo" HorizontalAlignment="Left" Margin="385,41,0,0" VerticalAlignment="Top" Height="79" Width="186">
+            <Grid Margin="0,0,-2,-12">
+                <Label Content="Hora:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="8,0,0,0"/>
+                <Label x:Name="lblHora" Content="-- : -- : --" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="58,0,0,0"/>
+                <Label Content="Fecha:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="8,26,0,0"/>
+                <Label x:Name="lblFecha" Content="-- / -- / --" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="58,26,0,0"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Variable En Tiempo Real" HorizontalAlignment="Left" Margin="385,136,0,0" VerticalAlignment="Top" Height="110" Width="186">
+            <Grid Margin="0,-4,-2,-8" HorizontalAlignment="Left" Width="176">
+                <Grid Margin="8,9,10,11">
+                    <Label Content="Temperatura:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"/>
+                    <Label x:Name="lblTemperatura" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,0,0,0" FontWeight="Bold"/>
+                    <Label Content="Humedad:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="0,26,0,0"/>
+                    <Label x:Name="lblHumedad" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,26,0,0" FontWeight="Bold"/>
+                    <Label Content="°C" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="124,0,-10,0"/>
+                    <Label Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,26,-8,0" RenderTransformOrigin="0.783,1.926"/>
+                    <Label Content="Iluminación:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="0,53,0,0"/>
+                    <Label x:Name="lblluminacion" Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="90,53,0,0" FontWeight="Bold"/>
+                    <Label Content="--" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="125,53,-8,0" RenderTransformOrigin="0.783,1.926"/>
+
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Modo de Funcionamiento" HorizontalAlignment="Left" Margin="385,266,0,0" VerticalAlignment="Top" Height="72" Width="186">
+            <Grid Margin="0,0,-2,-12">
+                <RadioButton x:Name="rbtnAutomatico" Content="Automático" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="13" IsChecked="True" Click="rbtnAutomatico_Click"/>
+                <RadioButton x:Name="rbtnProgramado" Content="Programado" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" FontSize="13" Click="rbtnProgramado_Click"/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>

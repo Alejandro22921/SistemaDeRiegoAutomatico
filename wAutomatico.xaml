@@ -6,20 +6,20 @@
         <GroupBox Header="Control del Riego" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="131" Width="510" FontSize="13">
             <Grid HorizontalAlignment="Left" Height="125" Margin="10,-4,-2,-14" VerticalAlignment="Top" Width="490">
                 <Grid Margin="123,10,194,31">
-                    <Label Content="Encender riego cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+                    <Label Content="Activar riego cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
                     <Label Content="Humedad:" HorizontalAlignment="Left" Margin="5,57,0,0" VerticalAlignment="Top" FontSize="13"/>
                     <Label Content="Temperatura:" HorizontalAlignment="Left" Margin="5,31,0,0" VerticalAlignment="Top" FontSize="13"/>
-                    <TextBox x:Name="txtTemperaturaEncender" HorizontalAlignment="Left" Height="23" Margin="90,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
-                    <TextBox x:Name="txtHumedadEncender" HorizontalAlignment="Left" Height="23" Margin="90,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtTemperaturaActivar" HorizontalAlignment="Left" Height="23" Margin="90,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtHumedadActivar" HorizontalAlignment="Left" Height="23" Margin="90,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
                     <Label Content="°C" HorizontalAlignment="Left" Margin="150,31,0,0" VerticalAlignment="Top" FontSize="13"/>
                     <Label Content="--" HorizontalAlignment="Left" Margin="150,59,0,-2" VerticalAlignment="Top" FontSize="13"/>
                 </Grid>
                 <Grid Margin="305,10,8,31">
-                    <Label Content="Apagar riego cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+                    <Label Content="Desactivar riego cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
                     <Label Content="Humedad:" HorizontalAlignment="Left" Margin="6,57,0,0" VerticalAlignment="Top" FontSize="13"/>
                     <Label Content="Temperatura:" HorizontalAlignment="Left" Margin="6,30,0,0" VerticalAlignment="Top" FontSize="13"/>
-                    <TextBox x:Name="txtTemperaturaApagar" HorizontalAlignment="Left" Height="23" Margin="94,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
-                    <TextBox x:Name="txtHumedadApagar" HorizontalAlignment="Left" Height="23" Margin="94,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtTemperaturaDesactivar" HorizontalAlignment="Left" Height="23" Margin="94,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtHumedadDesactivar" HorizontalAlignment="Left" Height="23" Margin="94,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
                     <Label Content="°C" HorizontalAlignment="Left" Margin="154,31,0,0" VerticalAlignment="Top" FontSize="13"/>
                     <Label Content="--" HorizontalAlignment="Left" Margin="154,59,0,-2" VerticalAlignment="Top" FontSize="13"/>
                 </Grid>
@@ -27,13 +27,13 @@
         </GroupBox>
         <GroupBox Header="Iluminación" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="121" Width="510" FontSize="13">
             <Grid HorizontalAlignment="Left" Height="109" Margin="10,-4,-2,0" VerticalAlignment="Top" Width="490">
-                <Grid Margin="121,0,176,11">
-                    <Label Content="Encender iluminación cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+                <Grid Margin="121,0,163,11">
+                    <Label Content="Activar iluminación cuando:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
                     <Label Content="Intensidad:" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="13"/>
-                    <Label Content="Apagar iluminación cuando:" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="13" Width="191" FontWeight="Bold"/>
+                    <Label Content="Desactivar iluminación cuando:" HorizontalAlignment="Left" Margin="0,50,-15,0" VerticalAlignment="Top" FontSize="13" Width="208" FontWeight="Bold"/>
                     <Label Content="Intensidad:" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="13"/>
-                    <TextBox x:Name="txtIntensidadEncender" HorizontalAlignment="Left" Height="23" Margin="78,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
-                    <TextBox x:Name="txtIntensidadApagar" HorizontalAlignment="Left" Height="23" Margin="78,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtIntensidadActivar" HorizontalAlignment="Left" Height="23" Margin="78,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
+                    <TextBox x:Name="txtIntensidadDesactivar" HorizontalAlignment="Left" Height="23" Margin="78,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="13" MaxLength="3"/>
                     <Label Content="--" HorizontalAlignment="Left" Margin="140,23,0,0" VerticalAlignment="Top" FontSize="13"/>
                     <Label Content="--" HorizontalAlignment="Left" Margin="140,71,0,0" VerticalAlignment="Top" FontSize="13"/>
                 </Grid>

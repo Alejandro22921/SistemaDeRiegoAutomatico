@@ -19,8 +19,11 @@
         </TabControl>
         <GroupBox Header="Consulta De Datos" HorizontalAlignment="Left" Margin="10,468,0,0" VerticalAlignment="Top" Height="103" Width="874">
             <Grid Margin="10,10,-2,-12">
-                <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="129,36,0,0"/>
-                <DatePicker HorizontalAlignment="Left" Margin="338,29,0,0" VerticalAlignment="Top" Width="120"/>
+                <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="42,10,0,0"/>
+                <DatePicker HorizontalAlignment="Left" Margin="242,10,0,0" VerticalAlignment="Top" Width="120"/>
+                <Button Content="Consultar" HorizontalAlignment="Left" Margin="759,10,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label Content="De:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
+                <Label Content="Hasta:" HorizontalAlignment="Left" Margin="195,8,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
 
