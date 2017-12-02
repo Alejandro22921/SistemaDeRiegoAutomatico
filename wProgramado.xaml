@@ -5,14 +5,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="167*"/>
-            <RowDefinition Height="159*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Label Content="MODO PROGRAMADO" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="529" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
         <Label Content="Sistema De Riego" HorizontalAlignment="Center" Margin="0,23,5,0" VerticalAlignment="Top" Width="524" HorizontalContentAlignment="Center"/>
         <Label Content="Horarios:" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="-137,10,0,0" VerticalAlignment="Top" Width="0"/>
+        <WindowsFormsHost HorizontalAlignment="Left" Height="175" Margin="112,66,0,0" VerticalAlignment="Top" Width="290"/>
 
     </Grid>
 </Window>
