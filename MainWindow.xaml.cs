@@ -58,6 +58,8 @@ namespace SistemaDeRiegoAutomatico
 
         void tiempo_Tick(object sender, EventArgs e)
         {
+            string horaActual;
+            horaActual = DateTime.Now.ToString("HH:mm:ss");
             lblHora.Content = DateTime.Now.ToString("hh:mm:ss tt");
             lblFecha.Content = DateTime.Now.ToString("ddd dd/MMM/yyyy");
 
@@ -71,7 +73,12 @@ namespace SistemaDeRiegoAutomatico
             }
             else                                   //MODO PROGRAMADO
             {
-
+                ConfiguracionProgramado configA = MainWindow.listaProgramadoRiego.Find(x => x.HActivar == horaActual);
+                if(configA != null)
+                    puerto.Write("0");  //PETICIÓN DE ACTIVAR BOMBA
+                ConfiguracionProgramado configD = MainWindow.listaProgramadoRiego.Find(x => x.HDesactivar == horaActual);
+                if (configD != null)
+                    puerto.Write("1");  //PETICIÓN DE DESACTIVAR BOMBA
             }
             
         }
