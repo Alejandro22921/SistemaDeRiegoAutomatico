@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Panel De Control" Height="394.212" Width="602.448" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/ecologismo.png">
     <Grid>
-        <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="581">
+        <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="596">
             <MenuItem x:Name="menuInicio" Header="Inicio"/>
             <MenuItem x:Name="menuConfiguracion" Header="Configuración">
                 <MenuItem x:Name="menuAutomatico" Header="Automático" Width="151" Click="menuAutomatico_Click"/>
@@ -45,5 +45,8 @@
             </Grid>
         </GroupBox>
 
+        
     </Grid>
+
+
 </Window>

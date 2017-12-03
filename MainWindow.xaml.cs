@@ -16,7 +16,6 @@ using System.IO.Ports;
 using System.Windows.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
 
-
 namespace SistemaDeRiegoAutomatico
 {
     /// <summary>
@@ -24,6 +23,9 @@ namespace SistemaDeRiegoAutomatico
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<ConfiguracionProgramado> listaProgramadoRiego = new List<ConfiguracionProgramado>();
+        public static List<ConfiguracionProgramado> listaProgramadoIluminacion = new List<ConfiguracionProgramado>();
+
         SerialPort puerto = new SerialPort("COM1", 9600, Parity.None, 8);
         DispatcherTimer tiempo = new DispatcherTimer();                       // TIMER DE TIEMPO HORA Y FECHA DEL SISTEMA.
         Chart figura = new Chart();
@@ -36,9 +38,11 @@ namespace SistemaDeRiegoAutomatico
             try
             {
                 DBRiegoAutomatizado.DBConectar();
+                
             }
             catch (Exception) { MessageBox.Show("NO SE PUDO CONECTAR A LA BASE DE DATOS", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error); }
-
+            DBRiegoAutomatizado.listaProgramadoRiego();
+            DBRiegoAutomatizado.listaProgramadoIluminacion();
             try
             {
                 puerto.Open(); //puerto.Close();
@@ -54,7 +58,9 @@ namespace SistemaDeRiegoAutomatico
 
         void tiempo_Tick(object sender, EventArgs e)
         {
-            lblHora.Content = DateTime.Now.ToString("h:mm:ss tt");
+            string horaActual;
+            horaActual = DateTime.Now.ToString("HH:mm:ss");
+            lblHora.Content = DateTime.Now.ToString("hh:mm:ss tt");
             lblFecha.Content = DateTime.Now.ToString("ddd dd/MMM/yyyy");
 
             if (puerto.IsOpen)
@@ -67,7 +73,19 @@ namespace SistemaDeRiegoAutomatico
             }
             else                                   //MODO PROGRAMADO
             {
-
+                ConfiguracionProgramado configA = MainWindow.listaProgramadoRiego.Find(x => x.HActivar == horaActual);
+                if (configA != null)
+                {
+                    MessageBox.Show("A");
+                    //puerto.Write("0");  //PETICIÓN DE ACTIVAR BOMBA
+                }
+                    
+                ConfiguracionProgramado configD = MainWindow.listaProgramadoRiego.Find(x => x.HDesactivar == horaActual);
+                if (configD != null)
+                {
+                    MessageBox.Show("D");
+                    //puerto.Write("1");  //PETICIÓN DE DESACTIVAR BOMBA
+                }
             }
             
         }

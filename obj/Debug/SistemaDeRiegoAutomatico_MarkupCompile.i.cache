@@ -4,16 +4,21 @@
 winexe
 C#
 .cs
-C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\
 SistemaDeRiegoAutomatico
 none
 false
 DEBUG;TRACE
-C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\App.xaml
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\App.xaml
 4-1584701345
 
+<<<<<<< HEAD
 13-2086578450
 161094401250
+=======
+1458179794
+17-320161451
+>>>>>>> 8028ba0a362aec2e394cd600d33e581b06a54490
 MainWindow.xaml;wAutomatico.xaml;wEstadisticas.xaml;wProgramado.xaml;
 
 False
