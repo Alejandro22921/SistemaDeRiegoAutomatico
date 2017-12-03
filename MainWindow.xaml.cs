@@ -74,11 +74,18 @@ namespace SistemaDeRiegoAutomatico
             else                                   //MODO PROGRAMADO
             {
                 ConfiguracionProgramado configA = MainWindow.listaProgramadoRiego.Find(x => x.HActivar == horaActual);
-                if(configA != null)
-                    puerto.Write("0");  //PETICIÓN DE ACTIVAR BOMBA
+                if (configA != null)
+                {
+                    MessageBox.Show("A");
+                    //puerto.Write("0");  //PETICIÓN DE ACTIVAR BOMBA
+                }
+                    
                 ConfiguracionProgramado configD = MainWindow.listaProgramadoRiego.Find(x => x.HDesactivar == horaActual);
                 if (configD != null)
-                    puerto.Write("1");  //PETICIÓN DE DESACTIVAR BOMBA
+                {
+                    MessageBox.Show("D");
+                    //puerto.Write("1");  //PETICIÓN DE DESACTIVAR BOMBA
+                }
             }
             
         }

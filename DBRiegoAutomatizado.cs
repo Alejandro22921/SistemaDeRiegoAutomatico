@@ -48,15 +48,16 @@ namespace SistemaDeRiegoAutomatico
 
         public static void GuardarConfiguracionRiego()
         {
-            //string query = string.Format("DELETE FROM ProgramadoRiego");
-            //SqlCommand comando1 = new SqlCommand(query, conexion);
+            string query = string.Format("DELETE FROM ProgramadoRiego");
+            SqlCommand comando1 = new SqlCommand(query, conexion);
+            comando1.ExecuteNonQuery();
 
             int cont = 0;
             foreach (ConfiguracionProgramado aux in MainWindow.listaProgramadoRiego)
             {
-                string query = string.Format("INSERT INTO ProgramadoRiego (HActivar, HDesactivar) VALUES ('{0}', '{1}')", aux.HActivar, aux.HDesactivar);
-                SqlCommand comando3 = new SqlCommand(query, conexion);
-                MessageBox.Show(query);
+                query = string.Format("INSERT INTO ProgramadoRiego (Id, HActivar, HDesactivar) VALUES ({0}, '{1}', '{2}')", cont, aux.HActivar, aux.HDesactivar);
+                SqlCommand comando2 = new SqlCommand(query, conexion);
+                comando2.ExecuteNonQuery();
                 cont++;
             }
         }
@@ -64,7 +65,8 @@ namespace SistemaDeRiegoAutomatico
         public static void GuardarConfiguracionIluminacion()
         {
             string query = string.Format("DELETE FROM ProgramadoIluminacion");
-            SqlCommand comando2 = new SqlCommand(query, conexion);
+            SqlCommand comando1 = new SqlCommand(query, conexion);
+            comando1.ExecuteNonQuery();
         }
 
         

@@ -25,10 +25,6 @@ namespace SistemaDeRiegoAutomatico
         public wProgramado()
         {
             InitializeComponent();
-            listViewProgramado.ItemsSource = MainWindow.listaProgramadoRiego;
-            listViewProgramado.Items.Refresh();
-            listaProgramadoRiegoAux = MainWindow.listaProgramadoRiego;
-            listaProgramadoIluminacionAux = MainWindow.listaProgramadoIluminacion;
         }
 
         private void txtHoras_KeyUp(object sender, KeyEventArgs e)
@@ -146,13 +142,6 @@ namespace SistemaDeRiegoAutomatico
                 e.Handled = true;
         }
 
-        private void btnAñadirRiego_Click(object sender, RoutedEventArgs e)
-        {
-            listaProgramadoRiegoAux.Add(new ConfiguracionProgramado(0, txtHorasR_A.Text + ":" + txtMinutosR_A.Text + ":" + txtSegundosR_A.Text, txtHorasR_D.Text + ":" + txtMinutosR_D.Text + ":" + txtSegundosR_D.Text));
-            listViewProgramado.ItemsSource = listaProgramadoRiegoAux;
-            listViewProgramado.Items.Refresh();
-        }
-
         private void txtHorasR_A_LostFocus(object sender, RoutedEventArgs e)
         {
             txtHorasR_A.Text = verificarHora2(txtHorasR_A.Text);
@@ -184,18 +173,6 @@ namespace SistemaDeRiegoAutomatico
         }
 
         // SE ELIMINAN LOS ELEMENTOS DE LAS LISTAS.
-        private void btnEliminarRiego_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (listViewProgramado.SelectedItems.Count == 1)
-                {
-                    listaProgramadoRiegoAux.RemoveAt(listViewProgramado.SelectedIndex);
-                    listViewProgramado.ItemsSource = listaProgramadoRiegoAux;
-                    listViewProgramado.Items.Refresh();
-                }
-            }catch(Exception){}
-        }
 
         private string verificarHora2(string x)
         {
@@ -206,11 +183,65 @@ namespace SistemaDeRiegoAutomatico
             return x;
         }
 
-        private void btnGuardarConfiguracion_Click(object sender, RoutedEventArgs e)
+
+        private void listViewProgramado_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MainWindow.listaProgramadoRiego = listaProgramadoRiegoAux;
-            MainWindow.listaProgramadoIluminacion = listaProgramadoIluminacionAux;
-            DBRiegoAutomatizado.GuardarConfiguracionRiego();
+            string s1 = listaProgramadoRiegoAux.ElementAt(listViewProgramado.SelectedIndex).HActivar, s2 = listaProgramadoRiegoAux.ElementAt(listViewProgramado.SelectedIndex).HDesactivar;
+            txtHorasR_A.Text = s1.Substring(0,2);
+            txtMinutosR_A.Text = s1.Substring(3,2);
+            txtSegundosR_A.Text = s1.Substring(6,2);
+
+            txtHorasR_D.Text = s2.Substring(0,2);
+            txtMinutosR_D.Text = s2.Substring(3,2);
+            txtSegundosR_D.Text = s2.Substring(6,2);
+        }
+
+        private void imagenEliminar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                if (listViewProgramado.SelectedItems.Count == 1)
+                {
+                    listaProgramadoRiegoAux.RemoveAt(listViewProgramado.SelectedIndex);
+                    listViewProgramado.ItemsSource = listaProgramadoRiegoAux;
+                    listViewProgramado.Items.Refresh();
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void imagenAñadir_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            listaProgramadoRiegoAux.Add(new ConfiguracionProgramado(0, txtHorasR_A.Text + ":" + txtMinutosR_A.Text + ":" + txtSegundosR_A.Text, txtHorasR_D.Text + ":" + txtMinutosR_D.Text + ":" + txtSegundosR_D.Text));
+            listViewProgramado.ItemsSource = listaProgramadoRiegoAux;
+            listViewProgramado.Items.Refresh();
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Guardar La Nueva Configuración?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                MainWindow.listaProgramadoRiego = listaProgramadoRiegoAux;
+                MainWindow.listaProgramadoIluminacion = listaProgramadoIluminacionAux;
+                DBRiegoAutomatizado.GuardarConfiguracionRiego();
+                //DBRiegoAutomatizado.GuardarConfiguracionIluminacion();
+            }
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            listaProgramadoRiegoAux = MainWindow.listaProgramadoRiego;
+            listaProgramadoIluminacionAux = MainWindow.listaProgramadoIluminacion;
+            listViewProgramado.ItemsSource = listaProgramadoRiegoAux;
+            listViewProgramado.Items.Refresh();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            listaProgramadoRiegoAux = null;
+            listaProgramadoIluminacionAux = null;
         }
     }
 }
