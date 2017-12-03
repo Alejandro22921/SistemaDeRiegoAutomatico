@@ -17,3 +17,6 @@ c:\users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\Si
 c:\users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\wProgramado.g.cs
 c:\users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\wEstadisticas.baml
 c:\users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\wEstadisticas.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\bin\Debug\SistemaDeRiegoAutomatico.exe.config
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.exe
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.pdb
