@@ -23,3 +23,19 @@ C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRieg
 C:\Users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\wProgramado.baml
 C:\Users\aleja\Documents\Visual Studio 2013\Projects\SistemaDeRiegoAutomatico\SistemaDeRiegoAutomatico\obj\Debug\wProgramado.g.cs
 >>>>>>> 8028ba0a362aec2e394cd600d33e581b06a54490
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\bin\Debug\SistemaDeRiegoAutomatico.exe
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\bin\Debug\SistemaDeRiegoAutomatico.pdb
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.csprojResolveAssemblyReference.cache
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\MainWindow.baml
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wAutomatico.baml
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wEstadisticas.baml
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wProgramado.baml
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\MainWindow.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wAutomatico.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wEstadisticas.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\wProgramado.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\App.g.cs
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico_MarkupCompile.cache
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.g.resources
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.Properties.Resources.resources
+C:\Users\B6-JU\Documents\GitHub\SistemaDeRiegoAutomatico\obj\Debug\SistemaDeRiegoAutomatico.csproj.GenerateResource.Cache

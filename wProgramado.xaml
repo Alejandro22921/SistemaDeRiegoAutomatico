@@ -18,7 +18,7 @@
         <Label Content=":" HorizontalAlignment="Left" Margin="59,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.538,2"/>
         <Label Content=":" HorizontalAlignment="Left" Margin="98,151,0,0" VerticalAlignment="Top"/>
         <Label Content="Hora De Apagado:" HorizontalAlignment="Left" Margin="33,126,0,0" VerticalAlignment="Top"/>
-        <GroupBox Header="Riego" HorizontalAlignment="Left" Margin="332,41,0,0" VerticalAlignment="Top" Height="250" Width="139"/>
+        <GroupBox Header="Riego" Margin="332,41,69,0" VerticalAlignment="Top" Height="250"/>
         <ListView x:Name="listViewProgramado" HorizontalAlignment="Left" Height="200" Margin="180,63,0,0" VerticalAlignment="Top" Width="131" SelectionChanged="listViewProgramado_SelectionChanged">
             <ListView.View>
                 <GridView>

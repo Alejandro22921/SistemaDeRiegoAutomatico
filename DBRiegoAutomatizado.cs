@@ -15,7 +15,7 @@ namespace SistemaDeRiegoAutomatico
         public static void DBConectar()
         {
             // CADENA DE CONEXIÓN ALEX: Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DBRiegoAutomatizado;Integrated Security=True
-            // CADENA DE CONEXIÓN VLADIMIR: 
+            // CADENA DE CONEXIÓN VLADIMIR: Data Source=LAPTOP-Q2ET4LU7\\SQLEXPRESS;Initial Catalog=DBRiegoAutomatizado;Integrated Security=True
             conexion = new SqlConnection("Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DBRiegoAutomatizado;Integrated Security=True");
             conexion.Open();
         }
